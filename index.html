@@ -10,21 +10,21 @@
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 </head>
 <body>
-      <div id="particles-js"></div>
+      <div id="particles-js" class="hide-on-med-and-down"></div>
       <ul id="slide-out" class="side-nav fixed grey darken-3">
         <li><div class="user-view center">
-          <img class="circle myPic" src="Images/ahmed.jpg"></a>
+          <!--<img class="circle myPic" src="Images/ahmed.jpg"></a>-->
           <p class="white-text name">Ahmed Ansari</p>
-          <a href="mailto:ahmedansari153@gmail.com"><p class="white-text email">ahmedansari153@gmail.com</p></a>
+          <a href="mailto:ahmedansari153@gmail.com"><p class="white-text email">info@ansariahmed.com</p></a>
         </div></li>
-        <li><a class="center white-text" href="#!">Skills</a></li>
-        <li><a class="center white-text" href="#!">Experience</a></li>
-        <li><a class="center white-text" href="#!">Education</a></li>
+        <li><a class="center white-text" href="#homePanel">Home</a></li>
+        <li><a class="center white-text" href="#skillsPanel">Skills</a></li>
+        <li><a class="center white-text" href="#historySection">Experience</a></li>
       </ul>
       <main>
           <a href="#" data-activates="slide-out" class="button-collapse hide-on-med-and-up"><i class="material-icons">menu</i></a>
           <!-- First panel in site -->
-          <div id="homePanel" class="section">
+          <div id="homePanel" class="section scrollspy">
               <!-- particles.js container -->
               <div class="content">
                   <div id="lineDrawing" class="center hidden">
@@ -42,7 +42,7 @@
               </div>
           </div>
           <!-- Panel for List of Skills -->
-          <div id="skillsPanel">
+          <div id="skillsPanel" class="scrollspy">
               <div class="parallax-container">
                 <div class="parallax">
                   <img src="Images/pexels-photo.jpg">
@@ -244,7 +244,7 @@
                   </div>
               </div>
           </div>
-          <div id="historySection">
+          <div id="historySection" class="scrollspy">
             <div class="parallax-container">
               <div class="parallax"><img src="Images/landscape2.jpg"></div>
               <h3 class="center white-text sectionHead">Experience</h3>
@@ -279,11 +279,36 @@
             </section>
           </div>
       </main>
+        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Ahmed Ansari</h5>
+                <h5 class="white-text">Junior Web Developer</h5>
+                <h6 class="white-text email"><a href="mailto:info@ansariahmed.com">info@ansariahmed.com</a></h6>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Navigation</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#homePanel">Home</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#skillsPanel">Skills</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#historySection">Experience</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright Text
+            </div>
+          </div>
+        </footer>
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.js"></script>
   <script type="text/javascript" src="Scripts/particles.min.js"></script>
   <script type="text/javascript" src="Scripts/anime-master/anime.min.js"></script>
   <script type="text/javascript" src="Scripts/Initialization.js"></script>
+  <script type="text/javascript" src="Scripts/smoothscroll.js"></script>
 </body>
 </html>
 

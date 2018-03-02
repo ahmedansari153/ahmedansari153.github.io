@@ -1,3 +1,15 @@
+footer {
+  margin-top: 20vh;
+}
+
+.page-footer {
+  background-color: #b71c1c;
+}
+
+.email > a {
+  color: #f9683a;
+}
+
 .sectionHead {
   margin-top: 5vh;
 }
