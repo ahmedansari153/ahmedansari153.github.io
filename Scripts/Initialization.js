@@ -73,7 +73,7 @@ function blinkSlide() {
       blink.classList.add('visible')
       var myAnimation = anime({
         targets: '.blink',
-        translateX: 315,
+        translateX: '9.8em',
         duration: 3000,
         easing: 'easeInOutQuart'
       });
