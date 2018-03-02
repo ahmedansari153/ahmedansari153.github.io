@@ -1,3 +1,15 @@
+footer {
+  margin-top: 20vh;
+}
+
+.page-footer {
+  background-color: #b71c1c;
+}
+
+.email > a {
+  color: #fff;
+}
+
 .sectionHead {
   margin-top: 5vh;
 }
@@ -109,7 +121,7 @@
 }
 
 .timeline ul li:nth-child(odd) div {
-  left: 45px;
+  left: 35px;
 }
  
 .timeline ul li:nth-child(odd) div::before {
@@ -119,7 +131,7 @@
 }
 
 .timeline ul li:nth-child(even) div {
-  left: -29vw;
+  left: -28vw;
 }
  
 .timeline ul li:nth-child(even) div::before {
