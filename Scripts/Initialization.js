@@ -1,3 +1,17 @@
+$('.parallax').parallax();
+$(".button-collapse").sideNav({
+  closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+  draggable: false // Choose whether you can drag to open on touch screens
+});
+// Initialize collapsible (uncomment the line below if you use the dropdown variation)
+//$('.collapsible').collapsible();
+$('.scrollspy').scrollSpy();
+
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', 'Scripts/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+//Used to start animations
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
   return (
@@ -9,13 +23,14 @@ function isElementInViewport(el) {
 }
 
 var items = document.querySelectorAll(".timeline li");
-var iconItems = document.querySelectorAll("#svgAttributes polygon")
-var header = document.getElementById("lineDrawing")
+var iconItems = document.querySelectorAll("#svgAttributes polygon");
+var header = document.getElementById("lineDrawing");
+var blink = document.getElementById("mainHead");
 // code for the isElementInViewport function
- 
+
+//Start animations on icons when each item is in viewport 
 function iconShow() {
   for (var i = 0; i < iconItems.length; i++) {
-
     if (isElementInViewport(iconItems[i])) {
       var svgAttributes = anime({
 			  targets: iconItems[i],
@@ -26,7 +41,7 @@ function iconShow() {
     }
   }
 }
-
+//Start animation on timeline
 function callbackFunc() {
   for (var i = 0; i < items.length; i++) {
     if (isElementInViewport(items[i])) {
@@ -34,23 +49,37 @@ function callbackFunc() {
     }
   }
 }
-
+//Start animation on my name
 function headerShow() {
-    if (isElementInViewport(header) && !header.classList.contains('visible')) {
-		  	header.classList.remove('hidden')
-		  	header.classList.add('visible')
-	      var lineDrawing = anime({
-			  targets: '#lineDrawing .lines path',
-			  strokeDashoffset: [anime.setDashoffset, 0],
-			  easing: 'easeInOutSine',
-			  duration: 1500,
-			  delay: function(el, i) { return i * 150 },
-			  direction: 'alternate',
-			  loop: false
-			});
-    }
+  if (isElementInViewport(header) && !header.classList.contains('visible')) {
+	  	header.classList.remove('hidden')
+	  	header.classList.add('visible')
+      var lineDrawing = anime({
+		  targets: '#lineDrawing .lines path',
+		  strokeDashoffset: [anime.setDashoffset, 0],
+		  easing: 'easeInOutSine',
+		  duration: 1500,
+		  delay: function(el, i) { return i * 150 },
+		  direction: 'alternate',
+		  loop: false
+		});
   }
- 
+}
+//Animation for the blinker to get moved
+function blinkSlide() {
+  if (isElementInViewport(blink) && !blink.classList.contains('visible')) {
+      blink.classList.remove('hidden')
+      blink.classList.add('visible')
+      var myAnimation = anime({
+        targets: '.blink',
+        translateX: 315,
+        duration: 3000,
+        easing: 'easeInOutQuart'
+      });
+  }
+}
+
+//Add event listeners for the above functions
 window.addEventListener("load", callbackFunc);
 window.addEventListener("scroll", callbackFunc);
 
@@ -60,26 +89,8 @@ window.addEventListener("scroll", iconShow);
 window.addEventListener("load", headerShow);
 window.addEventListener("scroll", headerShow);
 
+window.addEventListener("load", blinkSlide);
+window.addEventListener("scroll", blinkSlide);
 
-$(document).ready(function() {	
-  // Initialize collapse button
-  $(".button-collapse").sideNav({
-      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      draggable: true // Choose whether you can drag to open on touch screens
-  });
-  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-  //$('.collapsible').collapsible();
-  $('.scrollspy').scrollSpy();
-});
 
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load('particles-js', 'Scripts/particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
 
-var myAnimation = anime({
-  targets: '.blink',
-  translateX: 315,
-  duration: 3000,
-  easing: 'easeInOutQuart'
-});
