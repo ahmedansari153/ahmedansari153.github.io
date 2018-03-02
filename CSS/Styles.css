@@ -1,3 +1,11 @@
+.sectionHead {
+  margin-top: 5vh;
+}
+
+.parallax-container {
+  height: 18vh;
+}
+
 .hidden {
 	opacity: 0;
 }
@@ -7,7 +15,7 @@
 }
  
 .timeline ul li.in-view::after {
-  background: #F45B69;
+  background: #f05545;
 }
  
 .timeline ul li div {
@@ -32,8 +40,12 @@
 }
 
 @media only screen and (min-width : 992px) {
+  .egg {
+    width: 50vw;
+    margin: auto;
+  }
 	.timeDescription {
-		font-size: 10px;
+		font-size: 12px;
 	}
 }
 
@@ -44,6 +56,18 @@
 	.timeHead {
 		font-size: 25px;
 	}
+
+  h6 {
+    font-size: 40px;
+  }
+
+  h4 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 60px;
+  }
 }
 
 .timeline ul li {
@@ -95,7 +119,7 @@
 }
 
 .timeline ul li:nth-child(even) div {
-  left: -300px;
+  left: -29vw;
 }
  
 .timeline ul li:nth-child(even) div::before {
@@ -135,7 +159,7 @@ polygon {
 	display:inline-block;
 }
 
-h5, h4, h3, h2, h1 {
+h6, h5, h4, h3, h2, h1 {
 	font-family: 'Poiret One', cursive;
 }
 
