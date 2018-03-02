@@ -31,7 +31,8 @@ var blink = document.getElementById("mainHead");
 //Start animations on icons when each item is in viewport 
 function iconShow() {
   for (var i = 0; i < iconItems.length; i++) {
-    if (isElementInViewport(iconItems[i])) {
+    if (isElementInViewport(iconItems[i]) && !iconItems[i].classList.contains('visible')) {
+      iconItems[i].classList.add('visible')
       var svgAttributes = anime({
 			  targets: iconItems[i],
 			  points: '64 128 8.574 96 8.574 32 64 0 119.426 32 119.426 96',
