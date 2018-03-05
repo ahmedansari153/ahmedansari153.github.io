@@ -1,52 +1,3 @@
-@supports (-webkit-appearance:none) {
-
-    svg.logo #polygon1 {
-        fill:url(#image);
-    }
-    svg.logo #polygon2 {
-        fill:url(#image2);
-    }
-    svg.logo #polygon3 {
-        fill:url(#image3);
-    }
-    svg.logo #polygon4 {
-        fill:url(#image4);
-    }
-    svg.logo #polygon5 {
-        fill:url(#image5);
-    }
-    svg.logo #polygon6 {
-        fill:url(#image6);
-    }
-    svg.logo #polygon7 {
-        fill:url(#image7);
-    }
-    svg.logo #polygon8 {
-        fill:url(#image9);
-    }
-    svg.logo #polygon10 {
-        fill:url(#image10);
-    }
-    svg.logo #polygon11 {
-        fill:url(#image11);
-    }
-    svg.logo #polygon12 {
-        fill:url(#image12);
-    }
-    svg.logo #polygon13 {
-        fill:url(#image13);
-    }
-    svg.logo #polygon14 {
-        fill:url(#image14);
-    }
-    svg.logo #polygon15 {
-        fill:url(#image15);
-    }
-    svg.logo #polygon16 {
-        fill:url(#image16);
-    }
-}
-
 .name, .email {
   display: block;
 }
@@ -267,7 +218,7 @@ body {
 }
 
 path {
-  color: white;
+  stroke: white;
 }
 
 .user-view {
