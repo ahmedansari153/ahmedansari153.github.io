@@ -1,7 +1,7 @@
 @supports (-webkit-appearance:none) {
 
     svg.logo #polygon1 {
-        fill:url(#image1);
+        fill:url(#image);
     }
     svg.logo #polygon2 {
         fill:url(#image2);
