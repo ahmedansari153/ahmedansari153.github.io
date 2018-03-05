@@ -1,3 +1,12 @@
+.name, .email {
+  display: block;
+}
+
+.footerIcon {
+  height: 24px;
+  width: 24px;
+}
+
 footer {
   margin-top: 20vh;
 }
@@ -109,6 +118,19 @@ footer {
   width: 30vw;
   padding: 15px;
   background: #f05545;
+}
+
+@media only screen and (max-width: 991px) {
+  .timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 45vw;
+    padding: 15px;
+    background: #f05545;
+  }
+  .timeline ul li:nth-child(even) .z-depth-3 {
+    left: -48vw;
+  }
 }
  
 .timeline ul li div::before {
