@@ -5,7 +5,9 @@ $(".button-collapse").sideNav({
 });
 // Initialize collapsible (uncomment the line below if you use the dropdown variation)
 //$('.collapsible').collapsible();
-$('.scrollspy').scrollSpy();
+$('.scrollspy').scrollSpy({
+  scrollOffset: -25
+});
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load('particles-js', 'Scripts/particles.json', function() {
@@ -73,7 +75,7 @@ function blinkSlide() {
       blink.classList.add('visible')
       var myAnimation = anime({
         targets: '.blink',
-        translateX: '9.8em',
+        translateX: '9.7em',
         duration: 3000,
         easing: 'easeInOutQuart'
       });
