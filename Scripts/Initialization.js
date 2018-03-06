@@ -1,3 +1,4 @@
+$('.modal').modal();
 $('.parallax').parallax();
 $(".button-collapse").sideNav({
   closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
@@ -19,17 +20,33 @@ function isElementInViewport(el) {
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    rect.bottom <= (window.innerHeight+100 || document.documentElement.clientHeight+100) &&
+    rect.right <= (window.innerWidth+100 || document.documentElement.clientWidth+100)
   );
 }
 
 var items = document.querySelectorAll(".timeline li");
 var iconItems = document.querySelectorAll("#svgAttributes polygon");
+var projects = document.querySelectorAll(".project");
 var header = document.getElementById("lineDrawing");
 var blink = document.getElementById("mainHead");
 // code for the isElementInViewport function
 
+
+function projectShow() {
+  for (var i = 0; i < projects.length; i++) {
+    if (isElementInViewport(projects[i]) && !projects[i].classList.contains('visible')) {
+      projects[i].classList.add('visible')
+      var showProject = anime({
+        targets: projects[i],
+        opacity: 1,
+        translateY: '-100px',
+        elasticy: 100,
+        easing: 'easeInOutQuad'
+      });
+    }
+  }
+}
 //Start animations on icons when each item is in viewport 
 function iconShow() {
   for (var i = 0; i < iconItems.length; i++) {
@@ -95,5 +112,5 @@ window.addEventListener("scroll", headerShow);
 window.addEventListener("load", blinkSlide);
 window.addEventListener("scroll", blinkSlide);
 
-
-
+window.addEventListener("load", projectShow);
+window.addEventListener("scroll", projectShow);
