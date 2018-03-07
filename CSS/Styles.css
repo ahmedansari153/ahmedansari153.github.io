@@ -1,3 +1,75 @@
+.orangish {
+  background-color: #bf360c;
+}
+
+textarea.materialize-textarea:focus:not([readonly]){
+  border-bottom: 1px solid #fff !important;
+}
+
+.btn {
+  background-color: #f9683a;
+}
+
+.btn:hover {
+  background-color: #f05545;
+}
+
+@-webkit-keyframes autofill {
+    to {
+        color: #fff;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+/* label color */
+ .input-field label {
+   color: #fff;
+ }
+ /* label focus color */
+ .input-field input[type=text]:focus + label {
+   color: #fff;
+ }
+
+  .input-field input[type=email]:focus + label {
+   color: #fff;
+ }
+ /* label underline focus color */
+ .input-field input[type=text]:focus {
+   border-bottom: 1px solid #fff;
+   box-shadow: 0 1px 0 0 #fff;
+ }
+  .input-field input[type=email]:focus {
+   border-bottom: 1px solid #fff;
+   box-shadow: 0 1px 0 0 #fff;
+ }
+ /* valid color */
+ .input-field input[type=text].valid {
+   border-bottom: 1px solid #fff;
+   box-shadow: 0 1px 0 0 #fff;
+ }
+
+  .input-field input[type=email].valid {
+   border-bottom: 1px solid #fff;
+   box-shadow: 0 1px 0 0 #fff;
+ }
+ /* invalid color */
+ .input-field input[type=text].invalid {
+   border-bottom: 1px solid #f9683a;
+ }
+
+  .input-field input[type=email].invalid {
+   border-bottom: 1px solid #f9683a;
+ }
+ /* icon prefix focus color */
+ .input-field .prefix.active {
+   color: #fff;
+ }
+
 .project {
   opacity: 0;
 }
@@ -15,14 +87,9 @@
 }
 
 .footerIcon {
-  height: 24px;
-  width: 24px;
+  height: 2em;
+  width: 2em;
 }
-
-footer {
-  margin-top: 20vh;
-}
-
 .page-footer {
   background-color: #b71c1c;
 }
@@ -83,6 +150,15 @@ footer {
 }
 
 @media only screen and (max-width : 991px) {
+  .footerIcon {
+    height: 5em;
+    width: 5em;
+  }
+
+  footer li {
+    font-size: 3em;
+  }
+
 	.timeDescription {
 		font-size: 25px;
 	}
