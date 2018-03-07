@@ -13,7 +13,7 @@
       <div id="particles-js" class="hide-on-med-and-down"></div>
       <ul id="slide-out" class="side-nav fixed grey darken-3">
         <li><div class="user-view center">
-          <!--<img class="circle myPic" src="Images/ahmed.jpg">-->
+          <img class="circle myPic" src="Images/ahmed.jpg">
           <span class="white-text name">Ahmed Ansari</span>
           <a href="https://www.linkedin.com/in/ahmedansari153/" target="_blank"><img src="Images/Icons/linkedin.png" class="footerIcon"  alt=""></a>
           <a href="https://github.com/ahmedansari153" target="_blank"><img src="Images/Icons/github.png" class="footerIcon"  alt=""></a>
@@ -331,7 +331,7 @@
             </div>
             <div>
             <div id="projectContainer">
-              <div class="row valign-wrapper">
+              <div class="row">
                 <div class="col l6 m8 s12 offset-m2">
                   <div class="card project">
                     <div class="card-image">
@@ -339,8 +339,7 @@
                     </div>
                     <div class="card-content">
                       <h5 class="card-title white-text">Sepsis Reporting/Screening</h5>
-                      <p class="white-text">I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p class="white-text">This was an application that is used to gather and display sepsis data. It utilizes a SOAP API created in house to POST to a database. It offers a convenient and fast way to get sepsis data.</p>
                     </div>
                     <div class="card-action">
                       <a href="#">Sample Code</a>
@@ -350,13 +349,12 @@
                 <div class="col l6 m8 s12 offset-m2">
                   <div class="card project">
                     <div class="card-image">
-                      <img src="Images/Projects/SepsisReporting.png">
+                      <img src="Images/Projects/Gauntlet.png">
                     </div>
                     <div class="card-content">
                       <h5 class="card-title white-text">Gauntlet</h5>
-                      <h6 class="white-text">(Coming soon)</h6>
-                      <p class="white-text">I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <h6 class="white-text">(In Development)</h6>
+                      <p class="white-text">This is a remake of a project done at Nashville Software School(NSS). The project done at NSS was a group project, and now I want to do it on my own.</p>
                     </div>
                     <div class="card-action">
                       <a href="https://github.com/ahmedansari153/Gauntlet-Take-2" target="_blank">Github Repository</a>
@@ -365,20 +363,55 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col l6 m8 s12 offset-l3 offset-m2">
+                <div class="col l6 m8 s12 offset-m2 offset-l3">
                   <div class="card project">
                     <div class="card-image">
                       <img src="Images/Projects/PersonalSite.png">
                     </div>
                     <div class="card-content">
                       <h5 class="card-title white-text">Personal Site</h5>
-                      <p class="white-text">I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p class="white-text">Your looking at it right now! This site is to showcase some of my skills, and to let people know what I'm capable of.</p>
                     </div>
                     <div class="card-action">
                       <a href="https://github.com/ahmedansari153/ahmedansari153.github.io" target="_blank">Github Repository</a>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="contactPanel">
+              <div class="parallax-container">
+                <div class="parallax">
+                  <img src="Images/pexels-photo.jpg">
+                </div>
+                <h3 class="center white-text sectionHead">Contact Me</h3>
+              </div>
+              <div class="row">
+                <div class="card-panel red darken-4 col l8 m8 offset-m2 offset-s2 offset-l2">
+                  <form id="emailForm" action="https://formspree.io/info@ansariahmed.com" method="POST">
+                    <div class="row">
+                      <div class="input-field col l6 m12">
+                        <input class="white-text" type="text" name="name" id="name">
+                        <label for="name">Name</label>
+                      </div>
+                      <div class="input-field col l6 m12 s12">  
+                        <input class="white-text" type="email" name="email" id="email" class="validate">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field">
+                        <textarea id="textarea1" class="materialize-textarea white-text"></textarea>
+                        <label for="textarea1">Message</label>
+                      </div>
+                    </div>
+                    <input type="hidden" name="_next" value="#" />
+                    <div class="center">
+                      <button class="btn waves-effect waves-light black-text" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -388,17 +421,17 @@
         <footer class="page-footer">
           <div class="container">
             <div class="row">
-              <div class="col l6 s12">
+              <div class="col l6">
                 <h5 class="white-text">Ahmed Ansari</h5>
                 <h5 class="white-text">Junior Web Developer</h5>
                 <h6 class="white-text email"><a href="mailto:info@ansariahmed.com">info@ansariahmed.com</a></h6>
               </div>
-              <div class="col l4 offset-l2 s12">
+              <div class="col l4 offset-l2 right">
                 <h5 class="white-text">Navigation</h5>
                 <ul>
                   <li><a class="grey-text text-lighten-3" href="#homePanel">Home</a></li>
                   <li><a class="grey-text text-lighten-3" href="#skillsPanel">Skills</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#historySection">Experience</a></li
+                  <li><a class="grey-text text-lighten-3" href="#historySection">Experience</a></li>
                   <li><a class="grey-text text-lighten-3" href="#projectsPanel">Projects</a></li>
                 </ul>
               </div>

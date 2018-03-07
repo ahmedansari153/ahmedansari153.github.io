@@ -1,4 +1,3 @@
-$('.modal').modal();
 $('.parallax').parallax();
 $(".button-collapse").sideNav({
   closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
@@ -114,3 +113,10 @@ window.addEventListener("scroll", blinkSlide);
 
 window.addEventListener("load", projectShow);
 window.addEventListener("scroll", projectShow);
+
+$("#emailForm").submit(function(event) {
+  if($.trim($("#name").val()) === "" || $.trim($("#email").val()) === "" || $.trim($("#textarea1").val()) === "") {
+    event.preventDefault()
+    Materialize.toast("All fields must be entered", 3000, 'orangish');
+  }
+});
